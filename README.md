@@ -36,7 +36,7 @@ new Vue({
     }).then(data => {
       let products = this.$formatProducts(data);
 
-      // Do what you will
+      // Please check log
       console.log(products);
     });
   }
@@ -55,7 +55,7 @@ new Vue({
     d3.csv('./data/csv-files/bicycles.csv', (error, data) => {
       let products = this.$formatProducts(data);
 
-      // Do what you will
+      // Please check log
       console.log(products);
     });
   }

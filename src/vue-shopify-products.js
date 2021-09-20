@@ -5,7 +5,6 @@
 * Format shopify CSV files into a usable object.
 * https://github.com/mikestreety/vue-shopify-products
 *
-* Copyright 2017 Mike Street
 */
 
 const ShopifyProducts = {
@@ -23,11 +22,9 @@ const ShopifyProducts = {
 		};
 
 		Vue.prototype.$formatProducts = function(payload) {
-			// Create an empty products array
 			let products = [];
 
 			// Was it generated using CSV parser?
-			// https://github.com/okfn/csv.js
 			if (payload.fields) {
 				let headers = payload.fields;
 
@@ -144,7 +141,7 @@ const ShopifyProducts = {
 					}
 				}
 
-				// Remove any null values from the variatiomn
+				// Remove null values from the variatiomn
 				Object.keys(variation).forEach(key => variation[key] == null && delete variation[key]);
 
 				if (variation.sku) {
